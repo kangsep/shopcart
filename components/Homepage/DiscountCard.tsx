@@ -5,14 +5,14 @@ export default function DiscountCard() {
   return (
     <section className="py-10">
 
-      {/* Title */}
+      {/* title */}
       <div className="max-w-7xl mx-auto py-6 px-6">
-        <h2 className="text-2xl font-bold text-black">
+        <h2 className="text-3xl font-bold text-black">
           Get Up To 70% Off
         </h2>
       </div>
 
-      {/* Cards */}
+      {/* card */}
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4">
 
         

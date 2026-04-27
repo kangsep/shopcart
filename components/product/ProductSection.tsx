@@ -2,10 +2,25 @@
 import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 import { FaHeart, FaStar, FaRegStar } from "react-icons/fa";
-import { products } from "@/data/products";
+import { deals } from "@/data/products";
 
+// 
+export interface Product {
+  id: number;
+  name: string;
+  price: number;
+  desc: string;
+  image: string;
+  rating: number;
+  buyed: number;
+}
 
-// function rating
+//  
+interface ProductSectionProps {
+  title: string;
+  products: Product[];
+}
+
 function StarRating({ rating }: { rating: number }) {
   return (
     <div className="flex items-center gap-0.5">
@@ -20,7 +35,7 @@ function StarRating({ rating }: { rating: number }) {
   );
 }
 
-function ProductCard({ product }: { product: (typeof products)[0] }) {
+function ProductCard({ product }: { product: Product }) {
   const [wished, setWished] = useState(false);
 
   return (
@@ -66,7 +81,8 @@ function ProductCard({ product }: { product: (typeof products)[0] }) {
   );
 }
 
-export default function ProductSection() {
+
+export default function ProductSection({title, products}: ProductSectionProps) {
   const sliderRef = useRef<HTMLDivElement>(null);
   const isDragging = useRef(false);
   const startX = useRef(0);
@@ -111,8 +127,8 @@ export default function ProductSection() {
   return (
     <section className="py-10">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-2xl font-bold text-black mb-6">
-          Todays Best Deals For You!
+        <h2 className="text-3xl font-bold text-black mb-6">
+          {title}
         </h2>
 
         <div

@@ -1,4 +1,4 @@
-export const products = [
+export const deals = [
     {
     id: 1,
     name: "HomePod mini",
@@ -7,7 +7,7 @@ export const products = [
     image: "/placeholder/homepod.png",
     rating: 5,
     buyed: 121
-},
+    },
 
     {
     id: 2,
@@ -17,7 +17,7 @@ export const products = [
     image: "/placeholder/instax.png",
     rating: 5,
     buyed: 121
-},
+    },
 
     {
     id: 3,
@@ -27,7 +27,7 @@ export const products = [
     image: "/placeholder/duffle.png",
     rating: 5,
     buyed: 121
-},
+    },
 
     {
     id: 4,
@@ -37,7 +37,7 @@ export const products = [
     image: "/placeholder/tote.png",
     rating: 5,
     buyed: 121
-},
+    },
 
     {
     id: 5,
@@ -47,7 +47,7 @@ export const products = [
     image: "/placeholder/headphone.png",
     rating: 5,
     buyed: 121
-},
+    },
 
     {
     id: 6,
@@ -57,26 +57,64 @@ export const products = [
     image: "/placeholder/watch.png",
     rating: 5,
     buyed: 121
-},
+    },
+]
 
-//     {
-//     id: 7,
-//     name: "Cabin",
-//     price: 239.00,
-//     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus eius minus tempora.",
-//     image: "/placeholder/cabin.png",
-//     rating: 5,
-//     buyed: 121
-// },
+export const trending = [
+    {
+    id: 31,
+    name: "Cabin",
+    price: 239.00,
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus eius minus tempora.",
+    image: "/placeholder/cabin.png",
+    rating: 5,
+    buyed: 121
+    },
 
-//     {
-//     id: 8,
-//     name: "Laptop sleeve MacBook",
-//     price: 59.00,
-//     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus eius minus tempora.",
-//     image: "/placeholder/sleeve.png",
-//     rating: 5,
-//     buyed: 121
-// },
+    {
+    id: 32,
+    name: "Laptop sleeve MacBook",
+    price: 59.00,
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus eius minus tempora.",
+    image: "/placeholder/sleeve.png",
+    rating: 5,
+    buyed: 121
+    },
 
+    {
+    id: 33,
+    name: "Supreme Water Bottle",
+    price: 59.00,
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus eius minus tempora.",
+    image: "/placeholder/supreme.png",
+    rating: 5,
+    buyed: 121
+    },
+
+    {
+    id: 34,
+    name: "Laptop sleeve MacBook",
+    price: 59.00,
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus eius minus tempora.",
+    image: "/placeholder/sleeve-orange.png",
+    rating: 5,
+    buyed: 121
+    },
+
+    {
+    id: 35,
+    name: "Flower Laptop Sleeve",
+    price: 39.00,
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus eius minus tempora.",
+    image: "/placeholder/flower-sleeve.png",
+    rating: 5,
+    buyed: 121
+    },
+
+]
+
+export const mostSelling = [
+    {
+    
+    }
 ]
