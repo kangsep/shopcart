@@ -152,7 +152,6 @@ export default function ProductInformation({ product }: { product: Product }) {
           </button>
         </div>
 
-        {/* Delivery Info */}
         <div className="flex flex-col gap-3 mt-2">
           <div className="flex items-start gap-4 border border-gray-200 rounded-xl p-4">
             <FaTruck className="text-orange-400 text-xl mt-0.5 shrink-0" />

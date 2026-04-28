@@ -1,4 +1,3 @@
-// footer data
 export const departments = [
   "Fashion",
   "Education Product",

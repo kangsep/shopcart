@@ -50,7 +50,7 @@ function ProductCard({ product }: { product: Product }) {
         if (isDraggingCard.current) e.preventDefault();
       }}
     >
-      
+
       <div className="relative bg-gray-100 rounded-xl overflow-hidden h-65 flex items-center group justify-center">
         <Image
           src={product.image}
@@ -140,7 +140,7 @@ export default function ProductSection({title, products}: ProductSectionProps) {
   };
 
   return (
-    <section className="py-10">
+    <section className="py-16">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-black mb-6">
           {title}
