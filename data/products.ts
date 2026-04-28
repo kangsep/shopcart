@@ -157,7 +157,7 @@ export const mostSelling: Product[] = [
     rating: 4,
     buyed: 176,
     colors: ["#F2EAE0","#B4D3D9","#687FE5"],
-    stock: 13,
+    stock: 9,
     },
 
     {
@@ -169,7 +169,7 @@ export const mostSelling: Product[] = [
     rating: 4,
     buyed: 122,
     colors: ["#F2EAE0","#B4D3D9","#687FE5"],
-    stock: 13,
+    stock: 6,
     },
 
     {
@@ -181,7 +181,7 @@ export const mostSelling: Product[] = [
     rating: 4,
     buyed: 142,
     colors: ["#F2EAE0","#B4D3D9","#687FE5"],
-    stock: 13,
+    stock: 8,
     },
 
     {
@@ -193,7 +193,19 @@ export const mostSelling: Product[] = [
     rating: 4,
     buyed: 136,
     colors: ["#F2EAE0","#B4D3D9","#687FE5"],
-    stock: 13,
+    stock: 21,
+    },
+
+    {
+    id: 75,
+    name: "Macbook Pro 13",
+    price: 1089.00,
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus eius minus tempora.",
+    image: "/placeholder/macbook-13.png",
+    rating: 4,
+    buyed: 136,
+    colors: ["#F2EAE0","#B4D3D9","#687FE5"],
+    stock: 17,
     },
 ]
 

@@ -23,6 +23,7 @@ export default function Home() {
     <DiscountBanner/>
     <ProductGrid title="Check This Product" products={allProducts}/>
     <CardBanner/>
+    <ProductSection title="Most Selling Product" products={mostSelling}/>
     <PromotionSection/>
     </>
   );

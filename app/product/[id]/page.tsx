@@ -30,7 +30,7 @@ export default function ProductDetailPage() {
 
       {/* isi */}
       <ProductInformation product={product} />
-      <ProductSection products={mostSelling} title="Product Reccomendations"/>
+      <ProductSection products={mostSelling} title="Product Recommendations"/>
 
     </div>
   );
