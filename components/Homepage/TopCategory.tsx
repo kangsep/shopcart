@@ -30,7 +30,7 @@ export default function TopCategory() {
                         alt="handbag"
                         width={175}
                         height={225}
-                        className="transition-transform duration-300 ease-in-out group-hover:scale-120"
+                        className="`transition-transform duration-300 ease-in-out group-hover:scale-120`"
                     />
                     <span className="absolute top-3 text-white text-2xl font-semibold">
                         Hand Bag

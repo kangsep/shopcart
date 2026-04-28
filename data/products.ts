@@ -1,12 +1,26 @@
-export const deals = [
+export interface Product {
+  id: number;
+  name: string;
+  price: number;
+  desc: string;
+  image: string;
+  rating: number;
+  buyed: number;
+  colors?: string[];
+  stock?: number;
+}
+
+export const deals: Product[] = [
     {
     id: 1,
     name: "HomePod mini",
     price: 239.00,
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus eius minus tempora.",
     image: "/placeholder/homepod.png",
-    rating: 5,
-    buyed: 121
+    rating: 4,
+    buyed: 121,
+    colors: ["#F2EAE0","#B4D3D9","#687FE5"],
+    stock: 13,
     },
 
     {
@@ -15,8 +29,10 @@ export const deals = [
     price: 99.00,
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus eius minus tempora.",
     image: "/placeholder/instax.png",
-    rating: 5,
-    buyed: 121
+    rating: 4,
+    buyed: 121,
+    colors: ["#F2EAE0","#B4D3D9","#687FE5"],
+    stock: 13,
     },
 
     {
@@ -26,7 +42,9 @@ export const deals = [
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus eius minus tempora.",
     image: "/placeholder/duffle.png",
     rating: 5,
-    buyed: 121
+    buyed: 121,
+    colors: ["#F2EAE0","#B4D3D9","#687FE5"],
+    stock: 13,
     },
 
     {
@@ -36,7 +54,9 @@ export const deals = [
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus eius minus tempora.",
     image: "/placeholder/tote.png",
     rating: 5,
-    buyed: 121
+    buyed: 121,
+    colors: ["#F2EAE0","#B4D3D9","#687FE5"],
+    stock: 13,
     },
 
     {
@@ -46,7 +66,9 @@ export const deals = [
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus eius minus tempora.",
     image: "/placeholder/headphone.png",
     rating: 5,
-    buyed: 121
+    buyed: 121,
+    colors: ["#F2EAE0","#B4D3D9","#687FE5"],
+    stock: 13,
     },
 
     {
@@ -56,11 +78,13 @@ export const deals = [
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus eius minus tempora.",
     image: "/placeholder/watch.png",
     rating: 5,
-    buyed: 121
+    buyed: 121,
+    colors: ["#F2EAE0","#B4D3D9","#687FE5"],
+    stock: 13,
     },
 ]
 
-export const trending = [
+export const trending: Product[] = [
     {
     id: 31,
     name: "Cabin",
@@ -68,7 +92,9 @@ export const trending = [
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus eius minus tempora.",
     image: "/placeholder/cabin.png",
     rating: 5,
-    buyed: 121
+    buyed: 121,
+    colors: ["#F2EAE0","#B4D3D9","#687FE5"],
+    stock: 13,
     },
 
     {
@@ -77,8 +103,10 @@ export const trending = [
     price: 59.00,
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus eius minus tempora.",
     image: "/placeholder/sleeve.png",
-    rating: 5,
-    buyed: 121
+    rating: 4,
+    buyed: 121,
+    colors: ["#F2EAE0","#B4D3D9","#687FE5"],
+    stock: 13,
     },
 
     {
@@ -88,7 +116,9 @@ export const trending = [
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus eius minus tempora.",
     image: "/placeholder/supreme.png",
     rating: 5,
-    buyed: 121
+    buyed: 121,
+    colors: ["#F2EAE0","#B4D3D9","#687FE5"],
+    stock: 13,
     },
 
     {
@@ -98,7 +128,9 @@ export const trending = [
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus eius minus tempora.",
     image: "/placeholder/sleeve-orange.png",
     rating: 5,
-    buyed: 121
+    buyed: 121,
+    colors: ["#F2EAE0","#B4D3D9","#687FE5"],
+    stock: 13,
     },
 
     {
@@ -108,13 +140,65 @@ export const trending = [
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus eius minus tempora.",
     image: "/placeholder/flower-sleeve.png",
     rating: 5,
-    buyed: 121
+    buyed: 121,
+    colors: ["#F2EAE0","#B4D3D9","#687FE5"],
+    stock: 13,
     },
 
 ]
 
-export const mostSelling = [
+export const mostSelling: Product[] = [
     {
-    
-    }
+    id: 71,
+    name: "Instax Mini 11",
+    price: 89.00,
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus eius minus tempora.",
+    image: "/placeholder/mini11.png",
+    rating: 4,
+    buyed: 176,
+    colors: ["#F2EAE0","#B4D3D9","#687FE5"],
+    stock: 13,
+    },
+
+    {
+    id: 72,
+    name: "Hand Watch",
+    price: 59.00,
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus eius minus tempora.",
+    image: "/placeholder/hwatch.png",
+    rating: 4,
+    buyed: 122,
+    colors: ["#F2EAE0","#B4D3D9","#687FE5"],
+    stock: 13,
+    },
+
+    {
+    id: 73,
+    name: "adidas Sneakers",
+    price: 159.00,
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus eius minus tempora.",
+    image: "/placeholder/adidas.png",
+    rating: 4,
+    buyed: 142,
+    colors: ["#F2EAE0","#B4D3D9","#687FE5"],
+    stock: 13,
+    },
+
+    {
+    id: 74,
+    name: "Pendleton Water Bottle",
+    price: 89.00,
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus eius minus tempora.",
+    image: "/placeholder/pendleton.png",
+    rating: 4,
+    buyed: 136,
+    colors: ["#F2EAE0","#B4D3D9","#687FE5"],
+    stock: 13,
+    },
 ]
+
+export const allProducts = [
+  ...deals,
+  ...trending,
+  ...mostSelling,
+];

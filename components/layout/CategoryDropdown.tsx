@@ -6,7 +6,7 @@ import { categories } from "@/data/categories";
 
 export default function CategoryDropdown() {
   return (
-    <div className="absolute left-0 mt-4 w-[500px] bg-white shadow-xl rounded-xl p-4 z-50">
+    <div className="absolute left-0 mt-4 w-125 bg-white shadow-xl rounded-xl p-4 z-50">
       <h3 className="font-semibold mb-4">Popular Categories</h3>
 
       <div className="grid grid-cols-2 gap-4">

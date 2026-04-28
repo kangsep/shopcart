@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 import { FaHeart, FaStar, FaRegStar } from "react-icons/fa";
-import { deals } from "@/data/products";
+import Link from "next/link";
 
 // 
 export interface Product {
@@ -37,9 +37,20 @@ function StarRating({ rating }: { rating: number }) {
 
 function ProductCard({ product }: { product: Product }) {
   const [wished, setWished] = useState(false);
+  const isDraggingCard = useRef(false);
 
   return (
-    <div className="min-w-75 max-w-75 flex flex-col select-none">
+     <Link
+      href={`/product/${product.id}`}
+      draggable={false}
+      className="min-w-75 max-w-75 flex flex-col select-none"
+      onMouseDown={() => { isDraggingCard.current = false; }}
+      onMouseMove={() => { isDraggingCard.current = true; }} 
+      onClick={(e) => {
+        if (isDraggingCard.current) e.preventDefault();
+      }}
+    >
+      
       <div className="relative bg-gray-100 rounded-xl overflow-hidden h-65 flex items-center group justify-center">
         <Image
           src={product.image}
@@ -50,7 +61,10 @@ function ProductCard({ product }: { product: Product }) {
           draggable={false}
         />
         <button
-          onClick={() => setWished(!wished)}
+          onClick={(e) => {
+            e.preventDefault();
+            setWished(!wished);
+          }}
           className={`absolute top-3 right-3 w-9 h-9 rounded-full flex items-center justify-center bg-white transition-colors duration-200 ${
             wished ? "text-red-400" : "text-gray-400 hover:bg-pink-100"
           }`}
@@ -74,10 +88,11 @@ function ProductCard({ product }: { product: Product }) {
         <span className="text-sm text-gray-500">({product.buyed})</span>
       </div>
 
-      <button className="mt-3 border border-gray-900 text-gray-900 rounded-full px-5 py-2 text-sm font-medium hover:bg-gray-900 hover:text-white transition-colors w-fit">
+      <button onClick={(e) => e.preventDefault()} 
+      className="mt-3 border border-gray-900 text-gray-900 rounded-full px-5 py-2 text-sm font-medium hover:bg-gray-900 hover:text-white transition-colors w-fit">
         Add to Cart
       </button>
-    </div>
+    </Link>
   );
 }
 
@@ -103,7 +118,7 @@ export default function ProductSection({title, products}: ProductSectionProps) {
     el.addEventListener("scroll", updateProgress);
     return () => el.removeEventListener("scroll", updateProgress);
   }, []);
-
+  
   const onMouseDown = (e: React.MouseEvent) => {
     isDragging.current = true;
     startX.current = e.pageX - (sliderRef.current?.offsetLeft ?? 0);
@@ -136,9 +151,10 @@ export default function ProductSection({title, products}: ProductSectionProps) {
           className="flex gap-6 overflow-x-auto pb-4 cursor-grab"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           onMouseDown={onMouseDown}
-          onMouseMove={onMouseMove}
+          onMouseMove={onMouseMove} 
           onMouseUp={stopDrag}
           onMouseLeave={stopDrag}
+          onDragStart={(e) => e.preventDefault()}
         >
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />

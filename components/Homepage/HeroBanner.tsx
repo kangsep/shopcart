@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function HeroBanner() {
   return (
-    <section className="relative w-full overflow-hidden min-h-[420px] md:min-h-[500px]">
+    <section className="relative w-full overflow-hidden min-h-105 md:min-h-125">
 
       {/* bg */}
       <div className="absolute inset-0 z-0">

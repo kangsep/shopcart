@@ -1,4 +1,5 @@
 import ByBrand from "@/components/Homepage/ByBrand";
+import DiscountBanner from "@/components/Homepage/DiscountBanner";
 import DiscountCard from "@/components/Homepage/DiscountCard";
 import HeroBanner from "@/components/Homepage/HeroBanner";
 import PromotionSection from "@/components/Homepage/PromotionSection";
@@ -17,6 +18,7 @@ export default function Home() {
     <ProductSection title="Todays Best Deals For You!" products={deals} />
     <DiscountCard/>
     <ProductSection title="Weekly Popular Products" products={trending} />
+    <DiscountBanner/>
     <PromotionSection/>
     </>
   );
