@@ -6,7 +6,9 @@ export default function PromotionSection() {
   return (
     <section className="py-10">
         <div className="max-w-7xl mx-auto py-6 px-6">
+
             {/* Trending ....... Section */}
+
             <h2 className="text-3xl font-bold text-black">
                 Trending Product For You
             </h2>
@@ -59,7 +61,9 @@ export default function PromotionSection() {
             </div>
         
         <div className="max-w-7xl mx-auto py-6 px-6">
+
             {/* Best Selling  ....... Section */}
+
             <h2 className="text-3xl font-bold text-black">
                 Best Selling Store 
             </h2>
@@ -183,6 +187,80 @@ export default function PromotionSection() {
                 </div>
             </div>
         </div>
+
+        <div className="max-w-7xl mx-auto py-6 px-6">
+
+            {/* Service  ....... Section */}
+
+            <h2 className="text-3xl font-bold text-black">
+                Service To Help You Shop 
+            </h2>
+        </div>
+
+        <div className="max-w-7xl mx-auto p-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <div className="bg-gray-100 rounded-2xl overflow-hidden flex flex-col">
+                <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 leading-snug">
+                    Frequently Asked Questions
+                </h3>
+                <p className="mt-3 text-gray-500 text-sm leading-relaxed">
+                    Updates on safe Shopping in our Stores
+                </p>
+                </div>
+                <div className="relative w-full h-65 mt-auto overflow-hidden group">
+                <Image
+                    src="/placeholder/faq.png"
+                    alt="Frequently Asked Questions"
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-115"
+                />
+                </div>
+            </div>
+
+            <div className="bg-gray-100 rounded-2xl overflow-hidden flex flex-col">
+                <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 leading-snug">
+                    Online Payment Process
+                </h3>
+                <p className="mt-3 text-gray-500 text-sm leading-relaxed">
+                    Updates on safe Shopping in our Stores
+                </p>
+                </div>
+                <div className="relative w-full h-65 mt-auto overflow-hidden group">
+                <Image
+                    src="/placeholder/payment.png"
+                    alt="Online Payment Process"
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-115"
+                />
+                </div>
+            </div>
+
+            <div className="bg-gray-100 rounded-2xl overflow-hidden flex flex-col">
+                <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 leading-snug">
+                    Home Delivery Options
+                </h3>
+                <p className="mt-3 text-gray-500 text-sm leading-relaxed">
+                    Updates on safe Shopping in our Stores
+                </p>
+                </div>
+                <div className="relative w-full h-65 mt-auto overflow-hidden group">
+                <Image
+                    src="/placeholder/mantap.png"
+                    alt="Home Delivery Options"
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-115"
+                />
+                </div>
+            </div>
+
+            </div>
+        </div>
+
+
 
     </section>
     
