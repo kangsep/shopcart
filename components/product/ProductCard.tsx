@@ -39,7 +39,7 @@ function ProductCard({ product }: { product: Product }) {
       onMouseMove={() => { isDraggingCard.current = true; }}
       onClick={(e) => { if (isDraggingCard.current) e.preventDefault(); }}
     >
-      <div className="relative bg-gray-100 rounded-xl overflow-hidden h-[200px] flex items-center justify-center group">
+      <div className="relative bg-gray-100 rounded-xl overflow-hidden h-50 flex items-center justify-center group">
         <Image
           src={product.image}
           alt={product.name}

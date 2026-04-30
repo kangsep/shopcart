@@ -3,6 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { FaStar, FaRegStar, FaTruck, FaUndo } from "react-icons/fa";
 import { Product } from "@/data/products";
+import Link from "next/link";
 
 function StarRating({ rating }: { rating: number }) {
   return (
@@ -27,7 +28,6 @@ export default function ProductInformation({ product }: { product: Product }) {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-
       {/* bag. kiri */}
       <div className="flex flex-col gap-4">
         <div className="bg-gray-100 rounded-2xl overflow-hidden flex items-center justify-center h-105">
@@ -66,7 +66,9 @@ export default function ProductInformation({ product }: { product: Product }) {
       <div className="flex flex-col gap-4">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">{product.name}</h1>
-          <p className="text-gray-500 mt-2 text-sm leading-relaxed">{product.desc}</p>
+          <p className="text-gray-500 mt-2 text-sm leading-relaxed">
+            {product.desc}
+          </p>
         </div>
 
         <div className="flex items-center gap-2">
@@ -135,7 +137,9 @@ export default function ProductInformation({ product }: { product: Product }) {
             <div>
               <p className="text-gray-800 text-sm">
                 Only{" "}
-                <span className="text-green-500 font-bold">{product.stock} Items</span>{" "}
+                <span className="text-green-500 font-bold">
+                  {product.stock} Items
+                </span>{" "}
                 Left!
               </p>
               <p className="text-gray-400 text-sm">Don&apos;t miss it</p>
@@ -144,9 +148,11 @@ export default function ProductInformation({ product }: { product: Product }) {
         </div>
 
         <div className="flex gap-4">
-          <button className="flex-1 bg-green-900 text-white rounded-full py-3 font-semibold hover:bg-green-800 transition-colors">
-            Buy Now
-          </button>
+          <Link href={`/checkout?id=${product.id}`} className="flex-1">
+            <button className="w-full bg-green-900 text-white rounded-full py-3 font-semibold hover:bg-green-800 transition-colors">
+              Buy Now
+            </button>
+          </Link>
           <button className="flex-1 border border-gray-900 text-gray-900 rounded-full py-3 font-semibold hover:bg-gray-900 hover:text-white transition-colors">
             Add to Cart
           </button>
@@ -156,7 +162,9 @@ export default function ProductInformation({ product }: { product: Product }) {
           <div className="flex items-start gap-4 border border-gray-200 rounded-xl p-4">
             <FaTruck className="text-orange-400 text-xl mt-0.5 shrink-0" />
             <div>
-              <p className="font-semibold text-gray-900 text-sm">Free Delivery</p>
+              <p className="font-semibold text-gray-900 text-sm">
+                Free Delivery
+              </p>
               <p className="text-gray-400 text-sm underline cursor-pointer">
                 Enter your Postal code for Delivery Availability
               </p>
@@ -166,7 +174,9 @@ export default function ProductInformation({ product }: { product: Product }) {
           <div className="flex items-start gap-4 border border-gray-200 rounded-xl p-4">
             <FaUndo className="text-orange-400 text-xl mt-0.5 shrink-0" />
             <div>
-              <p className="font-semibold text-gray-900 text-sm">Return Delivery</p>
+              <p className="font-semibold text-gray-900 text-sm">
+                Return Delivery
+              </p>
               <p className="text-gray-400 text-sm">
                 Free 30days Delivery Returns.{" "}
                 <span className="underline cursor-pointer">Details</span>
